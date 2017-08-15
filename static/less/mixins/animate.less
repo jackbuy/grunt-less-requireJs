@@ -1,0 +1,54 @@
+/**
+ *  @file animate.less
+ *  @author zhaozhijian
+ */
+
+// 动画方式
+@modetype: both;
+
+/**
+ * @name 自定义动画
+ * 使用方式："amt-" 加上变量名字，如：amt-fadein
+ */
+@fadein: fadein;
+@toleft: toleft;
+
+.amt {
+    .animation-fill-mode(@modetype);
+}
+
+/*
+ * @name 动画向左平移
+ * @className amt-toleft
+ */
+.amt-@{toleft}:extend(.amt) {
+    .animation-duration(0.3s);
+    .animation-name(@toleft);
+}
+.keyframes (@toleft, {
+    0%{
+        opacity: 0;
+        .translate(50px,0px);
+    }
+    100%{
+        opacity: 1;
+        .translate(0,0);
+    }
+});
+
+/*
+ * @name 动画向上平移
+ * @className amt-totop
+ */
+.amt-@{fadein}:extend(.amt) {
+    .animation-duration(0.3s);
+    .animation-name(@fadein);
+}
+.keyframes (@fadein, {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+});

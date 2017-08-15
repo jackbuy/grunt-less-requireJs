@@ -1,39 +1,43 @@
  $(function(){
- 	// 菜单 
- 	$('.nav-btn').on('click',function(){
- 		if($(this).find('.mb-nav').hasClass('active')){
- 			$(this).find('.mb-nav').removeClass('active');
- 			$(this).next().hide();
+ 	// 菜单
+ 	$('.mb-nav').on('click',function(){
+ 		if($(this).hasClass('active')){
+ 			$(this).removeClass('active');
+ 			$('.header-content-nav').hide();
 			$('.mb-nav-bg').hide();
 			$('body').off('touchmove');
 			// $('body').css({'overflow':'auto'});
  		}else{
- 			$(this).find('.mb-nav').addClass('active');
- 			$(this).next().show();
+ 			$(this).addClass('active');
+ 			$('.header-content-nav').show();
  			$('body').on('touchmove',function(e){e.preventDefault();});
-			// $('body').css({'overflow':'hidden'}); 
+			// $('body').css({'overflow':'hidden'});
 			$('.mb-nav-bg').show();
- 		} 
+ 		}
  	});
 
  	// 遮罩关闭
- 	$('.mb-nav-bg').on('click',function(){ 
-		$('.nav-btn').find('.mb-nav').removeClass('active');
-		$('.nav-btn').next().hide();
+ 	$('.mb-nav-bg').on('click',function(){
+		$('.mb-nav').removeClass('active');
+		$('.header-content-nav').hide();
 		$('.mb-nav-bg').hide();
-		$('body').off('touchmove'); 
- 	}); 
+		$('body').off('touchmove');
+ 	});
 
+ 	// 返回顶部显示/隐藏
+ 	$(window).on('scroll',function(){
+	 	if($(this).scrollTop()>300){
+	 		$('.gotop').addClass('active');
+	 	}else{
+	 		$('.gotop').removeClass('active');
+	 	}
+	});
 
- 	// 中英切换
-	$('.languge').on('click',function(){
-		if($(this).hasClass('active')){
-			$(this).removeClass('active');
-			$(this).find('.languge-con').hide();
-		}else{
-			$(this).addClass('active');
-			$(this).find('.languge-con').show();
-		} 
+	// 返回顶部点击事件
+	$('.gotop').on('click',function(){
+	 	$('body,html').animate({
+	 		'scrollTop':'0px'
+	 	},300);
 	});
 
  });

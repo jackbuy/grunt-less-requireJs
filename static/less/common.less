@@ -7,62 +7,118 @@
 	.clearfix();
 }
 
-// 遮罩
-.mb-nav-bg{
+// 分页
+.pagenation{
+	width: 100%;
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	margin-top: 45px;
+	margin-bottom: 100px;
+	a,
+	span{
+		width: 32px;
+		height: 32px;
+		text-align: center;
+		line-height: 32px;
+		border:1px solid #fff;
+		color: #4c4c4c;
+		display: inline-block;
+		margin:0 2px;
+		vertical-align: top;
+	}
+	a{
+		&:hover{
+			background-color: #f5f5f5;
+			border:1px solid #999;
+		}
+		&.active,
+		&.active:hover{
+			border:1px solid #0860c4;
+			background-color: #0860c4;
+			color: #fff;
+		}
+		&.p-prev,
+		&.p-next{
+			width: 64px;
+			border:1px solid #ccc;
+		}
+	}
+}
+
+// 三明治菜单
+.mb-nav{
+	position:absolute;
+	right: 20px;
+	top: 36px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 999999;
+	// display: none;
+	span{
+		width: 100%;
+		height: 3px;
+		background: @color-main;
+		margin: 6px 0;
+		display: block;
+		.trs();
+	}
+	&.active{
+		span{
+			background: #222;
+			margin: 0;
+			position: relative;
+		}
+		span:nth-child(2){
+			display: none;
+		}
+		span:nth-child(1){
+			transform: rotate(-135deg);
+			-webkit-transform: rotate(-135deg);
+			top: 15px;
+		}
+		span:nth-child(3){
+			transform: rotate(135deg);
+			-webkit-transform: rotate(135deg);
+			top: 12px;
+		}
+	}
+	&-bg{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background:rgba(0,0,0,.8);
+		display: none;
+		z-index: 999998;
+	}
+}
+
+// 返回顶部
+.gotop{
 	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background:rgba(232,232,232,.3);
-	display: none;
-	z-index: 9;
-}
-
-.header{
-	height: 100px;
-	width: 100%;
-	background: #ccc;
-	&-inner{
-		width:@container-width;
-		margin:0 auto;
+	right: 20px;
+	bottom: 56px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border:3px solid #fff;
+	box-shadow: 0 0 6px #999;
+	background: @color-main url("../images/gotop.png") no-repeat center;
+	z-index: 8;
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	.trs();
+	&:hover{
+		background-color: #069;
 	}
-	&-logo{
-		float: left;
-		width: 120px;
-		height: 100px;
-		background: #888;
+	&.active{
+		visibility: visible;
+		opacity: 1;
+		filter: alpha(opacity=100);
 	}
-	&-content{
-		float:right;
-		&-search{
-			height: 44px;
-		}
-		&-nav{
-			height: 56px;
-			line-height: 56px;
-			li{
-				float: left;
-				a{
-					color: #222;
-					padding: 0 20px;
-					font-size: 16px;
-				}
-			}
-		}
-	}
-}
-
-.footer{
-	height: 44px;
-	line-height: 44px;
-	width: 100%;
-	font-size: 14px;
-	color: #666;
-	background: #ebebeb;
-	&-inner{
-		width:@container-width;
-		margin:0 auto;
-	}
-
 }

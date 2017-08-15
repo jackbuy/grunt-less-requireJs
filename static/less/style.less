@@ -2,29 +2,30 @@
 * 定义主色调和尺寸
 *
 */
-@color-main:#e0283e; //主色
-@color-sub:#323232; //辅色
-@container-width:1280px; // 网页宽度 
+@color-main:#1863c3; //主色
+@color-sub:#020e1e; //辅色(footer颜色)
+@container-width:1260px; // 网页宽度
 
 /**
 * mixins基础样式
 *
 */
-@import "mixins/base.less"; 
-@import "mixins/vendor-prefixes.less"; 
-@import (less) "mixins/animate.css"; //在less中引入css
+@import "mixins/base.less";
+@import "mixins/vendor-prefixes.less";
+@import "mixins/animate.less";
+// @import (less) "mixins/animate.css"; //在less中引入css
 
 /**
 * 一级栏目
 *
 */
 @import "common.less";  //公用样式
-@import "aboutus.less";  //关于我们
+@import "demo.less";  //demo
 
 /**
 * media查询
 *
- */ 
+ */
 // @import "media_max1600.less";  //最大宽度1600px
 // @import "media_max1366.less";  //最大宽度1366px
 // @import "media_max1200.less";  //最大宽度1200px
@@ -42,4 +43,3 @@
 
 
 
- 
