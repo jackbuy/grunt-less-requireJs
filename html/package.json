@@ -1,0 +1,26 @@
+{
+  "jsName": "all",
+  "cssName": "style",
+  "jsVersion": "v1.0",
+  "cssVersion": "v1.0",
+  "description": "项目名称",
+  "scripts": {
+    "http": "http-server",
+    "dev": "grunt"
+  },
+  "author": "Zhao zhi jian",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-css": "^0.5.4"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

@@ -1,0 +1,37 @@
+// ie hack的写法
+// .demo{
+//     background-color:red\0; /* ie 8/9*/
+//     background-color:blue\9\0; /* ie 9*/
+//     *background-color:#dddd00; /* ie 7*/
+//     _background-color:#CDCDCD; /* ie 6*/
+// }
+
+// _          IE6
+// *          IE6/7
+// !important IE7/Firefox
+// *+         IE7
+// \9         IE6/7/8
+// \0         IE8
+
+// 条件hack
+// <!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->  ie7以下(ie6)
+// <!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->  ie7
+// <!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->  ie8
+// <!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->   ie9
+// <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->    ie9以上（ie10, edge）
+
+
+// IE9 hack
+.lt-ie10{
+
+}
+
+// IE8 hack
+.lt-ie9{
+
+}
+
+// IE7 hack
+.lt-ie8{
+
+}

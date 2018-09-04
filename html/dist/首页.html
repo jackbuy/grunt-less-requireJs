@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/swiper.min.css">
+    <script type="text/javascript" src="js/lib/html5.js"></script>
+    <script type="text/javascript" src="js/lib/modernizr-2.6.2.min.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/lib/respond.min.js"></script>
+        <script type="text/javascript" src="js/script/incompatible.js"></script>
+    <![endif]-->
+    <title>首页</title>
+</head>
+<body>
+
+
+    <script type="text/javascript" data-main="js/config" src="js/lib/require.min.js"></script>
+    <script type="text/javascript">
+        require(['config'], function (){
+            require(['domready!', 'common', 'swiper', 'resizeend'], function (){
+                function resizePage(){
+                    
+                }
+                
+                $(window).resizeEnd({
+                    // delay : 500 /* 监控间隔时间 单位：毫秒 */
+                },function(){
+                    // 回调
+                    resizePage();
+                })
+                resizePage();
+
+        　　})
+    　　});
+    </script>
+</body>
+</html>

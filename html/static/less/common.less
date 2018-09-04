@@ -1,0 +1,144 @@
+// 全部标签启用盒子模型（兼容IE8+）
+*,*:before,*:after{
+    .border-box();
+}
+
+.palceholder(#7c7c7c);
+
+.row{
+    .clearfix();
+}
+
+// .scrollbar-style();
+.pvB{ 
+    image-rendering: optimizequality; 
+} 
+
+// 定义主色调和尺寸
+@color-main:#010101;//主色
+@color-sub:#323232;//辅色
+@color-hover:#2e8aee;//辅色
+@container-width:1600px;//网页宽度 
+
+
+// container
+.container{
+    width: @container-width;
+    margin:0 auto;
+}
+
+// container-full
+.container-full{
+    width:100%;
+}
+.border-none{
+    border: 0 none;
+}
+
+// 分页
+.pagenation{
+    padding: 60px 0px 90px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+    a{
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #fff;
+        text-align: center;
+        color: #000;
+        margin:0 8px; 
+        .transition(all 0.3s);
+        &:hover{
+            border: 1px solid @color-hover;
+            color: @color-hover;
+        }
+    }
+    a.active,
+    a.active:hover{
+        background: @color-hover;
+        color: #fff;
+    }
+    a.btn{
+        width: 82px;
+        background: none;
+        border: 1px solid #dadada;
+        line-height: 30px;
+        color: #444;
+        &:hover{
+            color: #fff;
+            background: @color-hover;
+            border-color: @color-hover;
+        }
+    }
+    .pagego{
+        padding-left: 30px;
+    }
+    select{
+        width: 45px;
+        height: 30px;
+        margin: 0 5px;
+        padding-left: 9px;
+        font-size: 16px;
+        border: 1px solid #dadada;
+        color: #666;
+        background: url("../images/icon_down.png") no-repeat 24px center;
+    }
+    a.btn.disable{
+        color: #bbb;
+    }
+}
+
+/* menu */
+.mb-nav{
+    display: none;
+    position:absolute;
+    right: 20px;
+    top: 17px;
+    z-index: 997;
+    width: 24px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+    span{
+        width: 100%;
+        height: 2px;
+        background: @color-sub;
+        margin: 7px 0;
+        display: block;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    &.active span{
+        background: #cf111a;
+        margin: 0;
+        position: relative;
+        &:nth-child(2){display: none;}
+        &:nth-child(1){transform: rotate(-135deg);-webkit-transform: rotate(-135deg);top: 15px;}
+        &:nth-child(3){transform: rotate(135deg);-webkit-transform: rotate(135deg);top: 13px;}
+    }
+    &-bg{
+        .amt(todown);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(255,255,255,1);
+        display: none;
+        z-index: 9;
+    }
+}
+
+// 百度分享微信二维码，弹出层样式
+.bd_weixin_popup{
+    height: 300px !important;
+    z-index: 2 !important;
+}
+.bd_weixin_popup_bg{
+    z-index: 1 !important;
+}
