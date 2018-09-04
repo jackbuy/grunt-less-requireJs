@@ -5,6 +5,5 @@
 
 > grunt  或  npm run dev
 
-
-# 显示
+# 浏览器浏览
 > http-server  或  npm run http
