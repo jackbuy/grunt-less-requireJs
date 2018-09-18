@@ -20,26 +20,10 @@
     <title>首页</title>
 </head>
 <body>
-
-
-    <script type="text/javascript" data-main="js/config" src="js/lib/require.min.js"></script>
+    <div class="test"></div>
     <script type="text/javascript">
-        require(['config'], function (){
-            require(['domready!', 'common', 'swiper', 'resizeend'], function (){
-                function resizePage(){
-                    
-                }
-                
-                $(window).resizeEnd({
-                    // delay : 500 /* 监控间隔时间 单位：毫秒 */
-                },function(){
-                    // 回调
-                    resizePage();
-                })
-                resizePage();
-
-        　　})
-    　　});
+        var pages = "home";
     </script>
+    <script type="text/javascript" data-main="js/config" src="js/lib/require.min.js" defer async="true"></script>
 </body>
 </html>

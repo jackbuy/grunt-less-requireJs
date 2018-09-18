@@ -10,9 +10,6 @@ $(function(){
         if($(this).hasClass('active')){
             $nav.removeClass('active');
             $(this).removeClass('active');
-            // $('body').off('touchmove').css({
-            //     "overflow":"auto"
-            // });
             $('body').css({
                 "overflow":"auto"
             });
@@ -20,23 +17,12 @@ $(function(){
         }else{
             $nav.addClass('active');
             $(this).addClass('active');
-            // $('body').on('touchmove', function(e){
-            //     e.preventDefault();
-            // });
             $('body').css({
                 "overflow":"hidden"
             });
             navBtnBg.show();
         } 
     });
-
-    // 遮罩关闭
-    // navBtnBg.on('click', function(){ 
-    //     navBtn.removeClass('active');
-    //     navBtn.next().hide();
-    //     $(this).hide();
-    //     $('body').off('touchmove');
-    // });
 
     /**
      * 返回顶部 - Pc端使用
@@ -75,52 +61,17 @@ $(function(){
     // $('img').on({
     //     mousedown: function(e){
     //         e.preventDefault();
-            
-    //         console.log(22);
     //     }
     // });
 
     /**
      * 首页打开菜单
      */
-    $('.menu').on('click', function(){
-        $('.home-menu').show();
-        $('.home-menu-bg').show();
-    });
-
-    $('.menu-close').on('click', function(){
-        $('.home-menu').hide();
-        $('.home-menu-bg').hide();
-    });
-
-    // 
     $('.mouse').on("click", function(){
         var oft = $('.news-hot').offset().top;
         $('body,html').animate({
             'scrollTop':oft
         },300);
-    });
-    /**
-     * 选择语言
-     */
-    $('.tool-bar-lau').on('click', function(){
-        $(".languge").show();
-        $(".languge-bg").show();
-        // if(!$(this).hasClass('active')){
-        //     $(this).addClass("active");
-        //     $(this).parent().next().slideDown();
-        //     $('body').on('touchmove', function(e){
-        //         e.preventDefault();
-        //     });
-        // }else{
-        //     $(this).removeClass("active");
-        //     $(this).parent().next().slideUp();
-        //     $('body').off('touchmove');
-        // }
-    });
-    $('.lau-btn').on('click', function(){
-        $(".languge").hide();
-        $(".languge-bg").hide();
     });
 
     /**
@@ -167,19 +118,15 @@ $(function(){
     }
     
     // 联系我们 - 办事处
-    var tab = $('.bsc-inner-content');
-    var menu = tab.find('.menu a');
-    var content = tab.find('.con');
-    tabCommon(menu, content, "active");
+    // var tab = $('.bsc-inner-content');
+    // var menu = tab.find('.menu a');
+    // var content = tab.find('.con');
+    // tabCommon(menu, content, "active");
 
-    // 公司业务 - 货运代理
-    
-    var tab2 = $('.hzhb-tab');
-    var menu2 = tab2.find('.hzhb-tab-menu span');
-    var content2 = tab2.find('.hzhb-tab-content ul');
-    tabCommon(menu2, content2, "active");
 
-    // 悬浮固定
+    /**
+     * 悬浮固定
+     */
     var fixTab = $(".sub-header");
     var fixTab2 = $(".sub-banner");
     var offsetTop = fixTab2.outerHeight(true) - fixTab.height();

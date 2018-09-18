@@ -10,7 +10,7 @@ require.config({
     // },
     paths:{
         // lib
-        "domready":"lib/domReady",
+        "domReady":"lib/domReady",
         "jquery": "lib/jquery-1.9.0.min",
         "owl": "lib/owlcarousel/owl.carousel.min",
         // "swiper": "lib/swiper4.3.5/js/swiper.min",
@@ -21,7 +21,8 @@ require.config({
         "velocity-ui": "lib/velocity.ui.min",
         "tweenmax": "lib/TweenMax.min",
         // script
-        "common": "script/common"
+        "comFunc": "script/comFunc",
+        "home": "script/home",
     },
     shim:{
         "owl": {
@@ -46,7 +47,10 @@ require.config({
         "tweenmax": {
             deps: ["jquery"]
         },
-        "common": {
+        "comFunc": {
+            deps: ["jquery"]
+        },
+        "home": {
             deps: ["jquery"]
         }
     },
@@ -63,3 +67,20 @@ require.config({
 // respond.js   是为IE9以下浏览器支持css3中屏幕自适应的一个小js插件。注意：要在服务器下才会有效
 // html5.js   让IE（包括IE6）支持HTML5元素方法
 // modernizr.js   帮助我们检测浏览器是否实现了某个feature，注意：只做检测
+
+if(pages.indexOf("home") > -1){
+    require(["home"]);
+}
+
+// if(pages.indexOf("common") > -1){
+//     require(["common"]);
+// }
+
+
+requirejs.onError = function (err) {
+    console.log(err.requireType);
+    if (err.requireType === 'timeout') {
+        console.log('modules: ' + err.requireModules);
+    }
+    throw err;
+};
