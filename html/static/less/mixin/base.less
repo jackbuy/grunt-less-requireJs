@@ -77,6 +77,13 @@ a:focus,*:focus {outline:none;}
 }
 
 
+// 线性渐变
+.linear-gradient(@left: left, @from-color: #6c63ff, @to-color:#02aaf4){
+	background-image: -webkit-linear-gradient(@left, @from-color, @to-color); 
+	background-image: -ms-linear-gradient(@left, @from-color, @to-color); 
+	background-image: -moz-linear-gradient(@left, @from-color, @to-color);
+}
+
 // 单行文本溢出隐藏
 .ovf-1(){
 	overflow: hidden; text-overflow: ellipsis; white-space: nowrap; 
