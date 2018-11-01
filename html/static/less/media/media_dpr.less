@@ -1,0 +1,100 @@
+
+// @media
+// only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+// only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+// only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+// only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+// only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+// only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+//   /* Large screen, retina, stuff to override above media query */
+
+// }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2){ 
+
+    // 详情按钮
+    .news-side .read-tj-con li .btn a,
+    .zp-content li .btn a,
+    .news-content .content li .btn a{
+        background-image: url(../images/see_detail_icon@2x.png);
+        background-size: 18px 5px;
+        &:hover{
+            background-image: url(../images/see_detail_icon_hover@2x.png);
+        }
+    }
+
+    .home-news .content li .btn a{
+        background-image: url(../images/home_news_icon@2x.png);
+        background-size: 18px 5px;
+    }
+
+    .h-jjfa .side .s-menu a.active{
+        background-image: url(../images/h_jjfa_btn@2x.png);
+        background-size: 106px 43px;
+    }
+
+    // 分享按钮
+    .news .news-detail .share a{
+        &.qq{
+            background-image: url(../images/qq@2x.png);
+            background-size: 16px 18px;
+        }
+        &.wx{
+            background-image: url(../images/wx@2x.png);
+            background-size: 21px 18px;
+        }
+        &.sn{
+            background-image: url(../images/sn@2x.png);
+            background-size: 23px 19px;
+        }
+        &:hover{
+            &.qq{
+                background-image: url(../images/qq_hover@2x.png);
+                background-size: 16px 18px;
+            }
+            &.wx{
+                background-image: url(../images/wx_hover@2x.png);
+                background-size: 21px 18px;
+            }
+            &.sn{
+                background-image: url(../images/sn_hover@2x.png);
+                background-size: 23px 19px;
+            }
+        }
+    }
+
+    // 联系
+    .map-des dl dd{
+        &.adrs{
+            background-image: url(../images/m_adrs@2x.png);
+            background-size: 20px 22px;
+        }
+        &.email{
+            background-image: url(../images/m_email@2x.png);
+            background-size: 20px 16px;
+        }
+        &.qq{
+            background-image: url(../images/m_qq@2x.png);
+            background-size: 19px 21px;
+        }
+        &.call{
+            background-image: url(../images/m_call@2x.png);
+            background-size: 20px 20px;
+        }
+    }
+
+    // 首页切换按钮
+    .home-news .side .h-handle .prev{
+        background-image: url(../images/prev@2x.png);
+        background-size: 30px 30px;
+    }
+    .home-news .side .h-handle .next{
+        background-image: url(../images/next@2x.png);
+        background-size: 30px 30px;
+    }
+}
