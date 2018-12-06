@@ -15,6 +15,7 @@ require.config({
         "owl": "lib/owlcarousel/owl.carousel.min",
         // "swiper": "lib/swiper4.3.5/js/swiper.min",
         "swiper": "lib/swiper.min",
+        "lazyload": "lib/jquery.lazyload",
         "nicescroll": "lib/jquery.nicescroll.min",
         "resizeend": "lib/jquery-resizeEnd.min",
         "velocity": "lib/velocity.min",
